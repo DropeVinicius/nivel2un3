@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <title>Nivelamento - Língua Portuguesa Nível 2 - Unidade 3</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Oculta rolagem horizontal */
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    
+        .titulo-programa {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 70px;
+            color: #003974;
+            font-weight: lighter;
+        }
+
+        .titulo-materia {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 133px;
+            color: #003974;
+            font-weight: lighter;
+        }
+
+        .subtitulo-professor {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 59px;
+            color: #0058B4;
+            font-weight: lighter;
+        }
+
+        .titulo-unidade {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 60px;
+        }
+
+        .titulo-saiba-mais {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 70px;
+        }
+        /* Estilização de Bebas Neue FIM */
+
+
+        /* Estilização de Roboto INICIO */
+        .peso-1 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 45px;
+        }
+
+        .texto {
+            font-family: 'Roboto', sans-serif;
+            font-size: 35px;
+        }
+
+        .sub-texto {
+            font-family: 'Roboto', sans-serif;
+            font-size: 25px;
+        }
+
+        .titulo-box {
+            font-family: 'Roboto', sans-serif;
+            font-size: 32px;
+        }
+
+        .fonte {
+            font-family: 'Roboto', sans-serif;
+            font-size: 25px;
+        }
+
+        .citacao {
+            font-family: 'Roboto', sans-serif;
+            font-size: 30px;
+            font-style: italic;
+        }
+
+        .referencias {
+            font-family: 'Roboto', sans-serif;
+            font-size: 35px;
+        }
+
+        /* Estilização de Roboto FIM */
+        /* Navbar styles INICIO */
+        .navbar {
+            background-color: #9F43BE;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            position: -webkit-sticky; /* Para navegadores antigos */
+            position: sticky; /* Para manter no topo durante o scroll */
+            top: 0; /* Faz com que a navbar fique no topo */
+            z-index: 10; /* Garante que o menu fique acima de outros elementos */
+            transition: background-color 0.3s ease; /* Transição suave para o efeito */
+        }
+
+        .navbar .logo img {
+            height: 50px;/* Ajuste conforme necessário */
+            width: auto;
+        }
+
+        .navbar .menu-toggle {
+            cursor: pointer;
+            font-size: 1.5em;
+            display: block;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: none;
+            flex-direction: column;
+            background-color: #9f43be;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 200px;
+            height: auto;
+            border-radius: 5px;
+            z-index: 10; /* Garante que o menu esteja acima de outros elementos */
+        }
+
+        .navbar ul.show {
+            display: flex;
+        }
+
+        .navbar ul li {
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .navbar ul li a:hover {
+            color: #003974; /* Cor ao passar o mouse */
+        }
+        .navbar .menu-toggle i:last-child {
+            display: none; /* Esconde o ícone de fechar inicialmente */
+        }
+        
+
+         /* Navbar styles FIM */
+
+        /* Titulo styles INICIO */
+        .titulo-intro {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .titulo-intro h1 {
+            margin: 0;
+            padding: 15px;
+        }
+        /* Titulo styles FIM */
+
+        /* Estilo da Capa do Livro INICIO*/
+        .capa-livro {
+            position: relative;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden; /* Para evitar que o pseudoelemento saia do container */
+            border-top: 3px solid #003974;
+            border-bottom: 3px solid #003974;
+        }
+
+        .capa-livro::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://res.cloudinary.com/di4ria1pf/image/upload/v1741784872/xw24i9yzlzfsicthkntq.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.2; /* Controle da opacidade */
+            z-index: -1; /* Coloca o background atrás do conteúdo */
+        }
+
+        
+
+        .capa-livro .conteudo-capa {
+            text-align: center;
+            color: white;
+            padding: 20px; /* Espaço interno para o texto */
+        }
+
+        .capa-livro .titulo-materia {
+            font-size: 80px;
+            font-family: 'Bebas Neue', cursive;
+            margin: 0;
+        }
+
+        .capa-livro .subtitulo-professor {
+            font-size: 40px;
+            font-family: 'Bebas Neue', cursive;
+            margin: 10px 0 0;
+        }
+        /* Estilo da Capa do Livro FIM*/
+
+        /* Barra Superior */
+        .barra-superior {
+            background-color: #015A42; /* Cor verde escuro */
+            width: 100%;
+            padding: 15px 15px;
+            text-align: center;
+            box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
+            overflow-x: hidden; /* Previne rolagem horizontal */
+        }
+
+        .barra-superior .titulo-barra {
+            font-family: 'Bebas Neue', cursive;
+            color: #FFF; /* Cor branca */
+            font-size: 50px;
+            font-weight: lighter;
+            margin: 0;
+        }
+
+        /* Conteúdo da Introdução */
+        .introducao {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            margin-top: 100px;
+            background-color: #E2F4EB; /* Fundo neutro */
+            overflow-x: hidden; /* Impede rolagem horizontal */
+        }
+        
+        .introducao .titulo-introducao {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 50px;
+            font-weight: lighter;
+            color: #015A42; /* Cor verde */
+            margin: 10px auto 10px auto;
+        }
+
+        .introducao .caixa-texto {
+            background-color: #E2F4EB; /* Verde mais claro */
+            padding: 20px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .introducao .caixa-texto p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        /* RESPONSIVIDADE SEÇÕES ACIMA*/
+        /* Capa do Livro - Responsividade */
+        @media (max-width: 768px) {
+            .capa-livro {
+                height: 350px; /* Reduz a altura da capa */
+                padding: 20px; /* Ajusta o espaçamento interno */
+            }
+
+            .capa-livro .titulo-materia {
+                font-size: 50px; /* Reduz o tamanho do título */
+            }
+
+            .capa-livro .subtitulo-professor {
+                font-size: 30px; /* Reduz o tamanho do subtítulo */
+            }
+
+            .capa-livro .conteudo-capa {
+                padding: 15px; /* Ajusta o padding para telas menores */
+            }
+        }   
+            /* Seção Introdução - Responsividade */
+        @media (max-width: 768px) {
+            .barra-superior {
+                padding: 10px; /* Reduz o padding da barra */
+            }
+
+            .barra-superior .titulo-barra {
+                font-size: 1.8rem; /* Reduz o tamanho do título na barra */
+            }
+
+            .introducao .titulo-introducao {
+                font-size: 2.8rem; /* Reduz o tamanho do título da introdução */
+                margin-top: 20px; /* Ajusta o espaçamento superior */
+            }
+
+            .introducao .caixa-texto {
+                padding: 20px; /* Reduz o padding da caixa de texto */
+                width: 90%; /* Ajusta a largura da caixa */
+            }
+
+            .introducao .caixa-texto p {
+                font-size: 1.2rem; /* Reduz o tamanho do texto */
+                line-height: 1.4;
+                margin-bottom: 10px; /* Ajusta a margem entre os parágrafos */
+            }
+        }
+        /* Responsividade para o título da seção de Programa */
+        @media (max-width: 768px) {
+            .titulo-programa {
+                font-size: 50px; /* Ajuste do tamanho do título */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .titulo-programa {
+                font-size: 35px; /* Ajuste para telas muito pequenas */
+            }
+        }
+         /* Título da seção */
+        .secao1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #9f43be11;
+            padding: 20px;  
+        }
+
+        .secao1 h1 {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            color: #015A42; /* Cor verde */
+            width: 90%;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+            
+        }
+
+        .secao1 p {
+            font-size: 19px;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin: 20px auto;
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+        .secao1 li{
+            font-size: 17px;
+            line-height: 1.6;
+            text-align: justify;
+            margin: 20px auto;
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+        /* Estilo responsivo para telas menores */
+        @media (max-width: 768px) {
+            .secao1 h1 {
+                font-size: 1.5rem;
+                text-align: left;
+            }
+
+            .secao1 p {
+                font-size: 0.9rem;
+                line-height: 1.4;
+            }
+
+        }
+        @media (max-width: 480px) {
+            .secao1 h1 {
+                font-size: 1.5rem;
+            }
+
+            .secao1 p {
+                font-size: 1.2rem;
+            } 
+        }
+         /* Título da seção */
+        .secao2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #FFF;
+            padding: 20px;  
+        }
+
+        .secao2 h1 {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            color: #015A42; /* Cor verde */
+            width: 90%;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+
+        .secao2 p {
+            font-size: 19px;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin: 20px auto;
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+
+        /* Estilo responsivo para telas menores */
+        @media (max-width: 768px) {
+            .secao2 h1 {
+                font-size: 1.5rem;
+                text-align: left;
+            }
+
+            .secao2 p {
+                font-size: 0.9rem;
+                line-height: 1.4;
+            }
+
+        }
+        @media (max-width: 480px) {
+            .secao2 h1 {
+                font-size: 1.5rem;
+            }
+
+            .secao2 p {
+                font-size: 1.2rem;
+            } 
+        }
+        .paragrafo-italic{
+            font-style: italic;
+            font-weight: bold;
+        }
+        .paragrafo-italicn{
+            font-style: italic;
+        }
+        /* Container principal */
+        .container-box {
+            background-color: #fff; /* Fundo branco */
+            border: 2px solid #9F43BE; /* Borda violeta */
+            border-radius: 10px; /* Cantos arredondados */
+            padding: 20px; /* Espaçamento interno */
+            width: 90%;
+            max-width: 800px; /* Limite de largura */
+            margin: 20px auto; /* Centralizar */
+        }
+        .container-boxv {
+            background-color: #fff; /* Fundo branco */
+            border: 2px solid #015A42; /* Borda violeta */
+            border-radius: 10px; /* Cantos arredondados */
+            padding: 20px; /* Espaçamento interno */
+            width: 90%;
+            max-width: 800px; /* Limite de largura */
+            margin: 20px auto; /* Centralizar */
+        }
+        .container-box p {
+            margin: 0; /* Remove a margem herdada */
+            padding: 5px;
+            width: 100%; /* Faz o texto ocupar todo o espaço disponível */
+        }
+        .container-boxv p {
+            margin: 0; /* Remove a margem herdada */
+            padding: 5px;
+            width: 100%; /* Faz o texto ocupar todo o espaço disponível */
+        }
+
+        /* Layout da imagem + texto */
+        .content {
+            display: flex;
+            align-items: stretch; /* Faz com que imagem e texto ocupem o mesmo espaço vertical */
+            justify-content: space-between;
+            gap: 20px; /* Espaço entre os elementos */
+        }
+
+        /* Imagem */
+        .content img {
+            width: 350px; /* Ajuste do tamanho da imagem */
+            height: auto;
+            border-radius: 5px; /* Pequeno arredondamento */
+            object-fit: cover; /* Garante que a imagem preencha seu espaço sem distorcer */
+        }
+
+        /* Texto */
+        .textimg {
+            font-family: 'Roboto', sans-serif !important;
+            font-size: 16px !important;
+            line-height: 1.5 !important;
+            flex: 1 !important; /* O texto ocupa o espaço restante */
+            text-align: justify;
+            height: 100%; /* Faz com que o bloco de texto tenha a mesma altura da imagem */
+        }
+
+        /* Descrição abaixo da imagem */
+        .description {
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            margin-top: 10px;
+            text-align: justify; /* Melhor alinhamento */
+        }
+
+        /* 🔹 Responsividade 🔹 */
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column !important; /* Empilha imagem e texto */
+                align-items: center;
+                text-align: center !important;
+            }
+
+            .container-box {
+                width: 85%; /* Reduz a largura em telas médias */
+                max-width: 400px; /* Define um limite para não ficar muito grande */
+            }
+            .container-boxv {
+                width: 85%; /* Reduz a largura em telas médias */
+                max-width: 400px; /* Define um limite para não ficar muito grande */
+            }
+
+            .content img {
+                width: 90% !important; /* Imagem mais responsiva */
+                max-width: 300px !important; /* Limite de tamanho */
+                margin-bottom: 10px !important; /* Espaço entre imagem e texto */
+            }
+
+            .textimg {
+                font-size: 14px !important; /* Texto reduzido */
+                text-align: justify !important; /* Melhor leitura */
+                display: block; /* Garante que o texto fique bem distribuído */
+            }
+            
+        }
+
+        @media (max-width: 480px) {
+            .container-box {
+                width: 80%; /* Ajuste para telas pequenas */
+                max-width: 400px; /* Reduz ainda mais em celulares menores */
+                padding: 15px; /* Ajusta o espaçamento interno */
+            }
+            .container-boxv {
+                width: 80%; /* Ajuste para telas pequenas */
+                max-width: 400px; /* Reduz ainda mais em celulares menores */
+                padding: 15px; /* Ajusta o espaçamento interno */
+            }
+        }
+         /* Container do slider */
+        .slider-container {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            overflow: hidden;
+            border: 3px solid #9F43BE; /* Borda violeta */
+            border-radius: 10px;
+            background-color: #fff;
+            margin: 20px auto;
+        }
+
+        /* Slider */
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* Slides */
+        .slide {
+            min-width: 100%;
+            text-align: center;
+            font-size: 18px;
+            font-weight: normal;
+            padding: 40px 20px; /* Ajuste para telas menores */
+            box-sizing: border-box;
+            white-space: normal; /* Permite quebra de linha */
+            word-wrap: break-word; /* Quebra palavras longas */
+            overflow-wrap: break-word; /* Alternativa */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+        }
+        /* Ajuste para responsividade */
+        @media (max-width: 768px) {
+            .slider-container {
+                width: 95%;
+            }
+
+            .slide {
+                font-size: 16px;
+                padding: 25px 30px; /* Aumenta o espaço interno */
+                min-height: 150px; /* Garante que todos os slides tenham espaço suficiente */
+                overflow: hidden;
+            }
+
+            .arrow {
+                font-size: 30px;
+            }
+
+            .left-arrow {
+                left: -5px;
+            }
+
+            .right-arrow {
+                right: -5px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .slider-container {
+                width: 100%;
+            }
+
+            .slide {
+                font-size: 14px;
+                padding: 20px 35px; /* Mais espaço para texto */
+                min-height: 160px; /* Mais altura mínima */
+            }
+
+            .arrow {
+                font-size: 25px;
+            }
+
+            .left-arrow {
+                left: -8px;
+            }
+
+            .right-arrow {
+                right: -8px;
+            }
+        }
+        /* Setas */
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #9F43BE; /* Cor violeta */
+            font-size: 40px; /* Tamanho da seta */
+            cursor: pointer;
+            z-index: 10;
+            transition: color 0.3s ease;
+        }
+
+        .arrow:hover {
+            color: #7c34a1; /* Cor mais escura ao passar o mouse */
+        }
+
+        .left-arrow {
+            left: 10px;
+        }
+
+        .right-arrow {
+            right: 10px;
+        }
+        .slide strong {
+            margin-right: 5px; /* Ajuste conforme necessário */
+        }
+        /* Retângulo de fundo */
+        .background-section {
+            background-color: #015A42; /* Cor de fundo verde */
+            border-radius: 20px; /* Bordas arredondadas */
+            min-height: 350px; /* Altura mínima */
+            width: 90%; /* Largura ajustada à estrutura */
+            max-width: 800px; /* Limite máximo */
+            height: auto; /* Altura do retângulo */
+            margin: 50px auto; /* Espaçamento da seção acima e centralização */
+            position: relative; /* Define o contexto de empilhamento */
+        }
+                /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .background-section {
+                width: 95%; /* Ajusta a largura */
+                margin: 50px auto; /* Ajuste de margem */
+            }
+        }
+        
+        /* Retângulo transparente (sobreposição) */
+        .transparent-section {
+            background-color: rgba(255, 255, 255, 0.822); /* Tom verde com transparência */
+            border: 2px solid #015A42; /* Borda sólida verde */
+            border-radius: 20px; /* Bordas arredondadas */
+            width: calc(100% - 40px); /* Reduz tamanho para acomodar margens */
+            height: 100%;
+            position: absolute; /* Define posicionamento relativo */
+            top: 20px;
+            left: 20px; 
+            z-index: 1; /* Garante que o retângulo fique sobre o fundo */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+            display: flex; /* Usamos flexbox para alinhar o conteúdo */
+            flex-direction: column; /* Alinha os elementos verticalmente */
+            justify-content: space-evenly; /* Distribui espaço uniformemente */
+            align-items: center; /* Alinha o conteúdo à esquerda */
+            text-align: center; /* Centraliza o texto */
+        }
+        
+        
+                /* Responsividade - Ajuste da largura da transparent-section para telas menores */
+        @media (max-width: 768px) {
+            .transparent-section {
+                width: 90%; /* Diminui a largura da sobreposição */
+                left: 5%; /* Ajusta o posicionamento para centralizar */
+                right: 5%; /* Garante que o elemento ocupe menos espaço na tela */
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+        }
+        /* Círculo verde */
+        .circle-green {
+            position: absolute;
+            top: -30px; /* Distância do topo */
+            left: -30px; /* Distância da esquerda */
+            background-color: #015A42; /* Cor verde */
+            border-radius: 50%; /* Para garantir que seja redondo */
+            width: 120px; /* Tamanho do círculo */
+            height: 120px; /* Tamanho do círculo */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2; /* Garantir que fique sobre o fundo */
+        }
+
+        /* Círculo branco sobre o verde */
+        .circle-white {
+            position: absolute;
+            top: -4px; /* Eleva o círculo branco para cima */
+            left: -5px; /* Centraliza o círculo branco sobre o verde */
+            background-color: white; /* Cor branca */
+            border-radius: 50%; /* Para garantir que seja redondo */
+            width: 120px; /* Tamanho do círculo branco */
+            height: 120px; /* Tamanho do círculo branco */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 3; /* Coloca o círculo branco sobre o verde */
+        }
+
+        /* Estilizando o ícone dentro do círculo branco */
+        .circle-white i {
+            font-size: 80px; /* Tamanho do ícone */
+            color: #015A42; /* Cor verde para o ícone */
+        }
+        /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .circle-green, .circle-white {
+                width: 60px; /* Diminui o tamanho */
+                height: 60px; /* Diminui o tamanho */
+                top: -5px; /* Ajusta o posicionamento */
+                left: -5px; /* Ajusta o posicionamento */
+            }
+
+            .circle-white i {
+                font-size: 40px; /* Reduz o ícone */
+            }
+        }
+        .learn-more-title {
+            color: #015A42; /* Cor verde */
+            font-size: 50px; /* Tamanho do título */
+            font-weight: lighter;
+            text-align: left;
+            font-family: 'Bebas Neue', sans-serif; /* Fonte Bebas Neue */
+            margin: -25px 0;
+            width: 80%; /* Ocupa toda a largura disponível */
+        }
+        .learn-more-paragraph {
+            font-family: 'Roboto', sans-serif; /* Fonte Roboto */
+            text-align: left;
+            font-size: 17px;
+            line-height: 1.4; /* Espaçamento entre linhas */
+            color: #000; /* Cor verde */
+            margin: -15px 0; /* Reduz margens */
+            width: 90%; /* Ocupa toda a largura disponível */
+            word-wrap: break-word;
+        }
+        .centered-paragraph {
+            text-align: center; /* Centraliza o texto horizontalmente */
+            margin: -5px 0; /* Ajusta a margem para uniformidade */
+            font-size: 17px; /* Mantém o tamanho consistente */
+            line-height: 1.4; /* Controla o espaçamento entre linhas */
+        }
+                /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .learn-more-title {
+                font-size: 30px; /* Ajusta o tamanho do título */
+                text-align: center;
+                margin: 10px 0;
+            }
+
+            .learn-more-paragraph {
+                font-size: 15px; /* Ajusta o tamanho do texto */
+                line-height: 1.4;
+                text-align: justify; /* Centraliza o texto */
+                margin: 5px 0; /* Reduz margens */
+            }
+        }
+            .outer-background {
+                padding: 10px;
+                background-color: #9f43be11; /* Cor de fundo para o contêiner externo */
+        }
+        .play-icon {
+            display: flex; /* Flexbox para centralizar o conteúdo */
+            justify-content: center;
+            align-items: center;
+            background-color: #015A42; /* Fundo verde */
+            color: #FFF; /* Ícone branco */
+            width: 90px; /* Largura do botão */
+            height: 55px; /* Altura do botão */
+            border-radius: 13px;
+            font-size: 40px; /* Tamanho do ícone */
+            cursor: pointer; /* Cursor de clique */
+            transition: transform 0.3s ease; /* Efeito de transição */
+        }
+
+        .play-icon:hover {
+            transform: scale(1.1); /* Aumenta levemente no hover */
+        }
+                /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .play-icon {
+                width: 60px; /* Diminui a largura */
+                height: 40px; /* Diminui a altura */
+                font-size: 25px; /* Diminui o tamanho do ícone */
+            }
+        }
+        /* Modal - Oculto por padrão */
+        .video-modal {
+            display: none; /* Inicialmente o modal está oculto */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro transparente */
+            z-index: 1000; /* Garantir que o modal fique acima de outros conteúdos */
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Conteúdo do modal (onde ficará o vídeo) */
+        .video-content {
+            position: relative;
+            background-color: #015A42;
+            border-radius: 10px;
+            padding: 20px;
+        }
+         
+        /* Responsividade - Ajustes para dispositivos móveis */
+        @media (max-width: 768px) {
+            .video-content {
+                max-width: 100%; /* Maximize a largura do modal no mobile */
+                padding: 10px;
+            }
+
+            .video-content iframe {
+                width: 100%; /* O iframe ocupará toda a largura disponível */
+                height: 56.25vw; /* Isso mantém a proporção de 16:9 */
+                max-height: 80vh; /* Evita que o vídeo ultrapasse a tela */
+                border-radius: 10px;
+            }
+        }
+
+        /* Botão de fechar */
+        .close-btn {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            font-size: 40px;
+            color: #FFF;
+            cursor: pointer;
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+        .close-btn:hover {
+            transform: scale(1.2); /* Aumenta levemente no hover */
+            color: #FF0000; /* Muda a cor para vermelho no hover */
+        }
+        .tabs-container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            border: 2px solid #015A42;
+            border-radius: 5px;
+        }
+        .tabs-header {
+            display: flex;
+            background-color: #015A42;
+        }
+        .tab-button {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            border-right: 2px solid white;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .tab-button:last-child {
+            border-right: none;
+        }
+        .tab-button:hover {
+            background-color: #005700;
+            transform: scale(1.01);
+        }
+        .tab-button.active {
+            background-color: #005700;
+        }
+        .tab-content {
+            display: none;
+            padding: 15px;
+            background: white;
+            border-top: 2px solid #015A42;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        /* Conteúdo da Conclusão */
+        .conclusao {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #E2F4EB; /* Fundo neutro */
+        }
+
+        .conclusao .titulo-conclusao {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 50px;
+            font-weight: lighter;
+            color: #015A42; /* Cor verde */
+            margin: 10px auto 10px auto;
+        }
+        .conclusao .caixa-texto {
+            background-color: #E2F4EB; /* Verde mais claro */
+            width: 100%;
+            max-width: 800px;
+        }
+        .conclusao .caixa-texto p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #333;
+            margin-bottom: 15px;
+            padding: 10px 0;
+        }
+
+        /* Estilo responsivo para telas menores */
+        @media (max-width: 768px) {
+            .conclusao .titulo-conclusao {
+                font-size: 2.8rem;
+                text-align: left;
+            }
+
+            .conclusao .caixa-texto p {
+                font-size: 1.2rem;
+                line-height: 1.4;
+                margin-bottom: 10px;
+            }
+
+        }
+        @media (max-width: 480px) {
+            .conclusao .titulo-conclusao {
+                font-size: 2.8rem;
+            }
+
+            .conclusao .caixa-texto p {
+                font-size: 1.2rem;
+                line-height: 1.4;
+                margin-bottom: 10px;
+            } 
+        }
+        /* Conteúdo da Introdução */
+        .referencias {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            background-color: #FFF; /* Fundo neutro */
+            border-top: 5px solid #015A42;
+        }
+
+        .referencias .titulo-referencias {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 50px;
+            font-weight: lighter;
+            color: #015A42; /* Cor verde */
+            margin: 10px auto 10px auto;
+        }
+
+        .referencias .caixa-texto {
+            background-color: #FFF; /* Verde mais claro */
+            padding: 20px;
+            width: 100%;
+            max-width: 800px;
+            box-sizing: border-box; /* Inclui padding nas dimensões */
+            overflow-wrap: break-word; /* Quebra de palavras longas */
+        }
+
+        .referencias .caixa-texto p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #000;
+            margin-bottom: 20px;
+        }
+        .referencias .caixa-texto {
+            word-wrap: break-word;
+            overflow-wrap: anywhere;
+        }
+        .referencias .caixa-texto, .conclusao .caixa-texto {
+            word-wrap: break-word;
+            overflow-wrap: anywhere;
+        }
+                /* Ajustes responsivos */
+        @media (max-width: 768px) {
+            .referencias .titulo-referencias {
+                font-size: 50px; /* Ajuste do tamanho da fonte */
+            }
+
+            .referencias .caixa-texto {
+                padding: 15px; /* Menos padding */
+                max-width: 90%; /* Ajusta o tamanho da caixa no tablet */
+            }
+
+            .referencias .caixa-texto p {
+                font-size: 16px; /* Reduz o tamanho da fonte para telas menores */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .referencias .titulo-referencias {
+                font-size: 2.8rem; /* Menor tamanho da fonte no mobile */
+            }
+
+            .referencias .caixa-texto {
+                max-width: 95%; /* Ajusta ainda mais o tamanho da caixa */
+            }
+
+            .referencias .caixa-texto p {
+                font-size: 14px; /* Reduz ainda mais o tamanho da fonte */
+            }
+        }
+
+        
+        /* Estilização do rodapé */
+        .footer {
+            border-top: 5px solid #015A42; /* Borda superior */
+            background-color: #FFFFFF; /* Fundo branco */
+            text-align: center; /* Centralizar texto */
+            padding: 15px 0; /* Espaçamento interno */
+            box-sizing: border-box; /* Inclui padding nas dimensões */
+        }
+
+        .footer p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            color: #015A42; /* Cor do texto */
+            margin: 0; /* Remove espaçamento externo */
+        }
+        /* Texto descritivo */
+        .footer .fonte-menor {
+            font-family: 'Roboto', sans-serif;
+            font-size: 13px;
+            color: #555; /* Cor neutra */
+            line-height: 1.5; /* Espaçamento entre linhas */
+            display: block; /* Garante quebra para nova linha */
+            margin-top: 10px; /* Espaço entre o texto e o divisor */
+        }
+                /* Divisor */
+        .footer-divider {
+            border: none; /* Remove borda padrão */
+            height: 1px; /* Altura da linha */
+            background-color: #015A42; /* Cor da linha */
+            margin: 10px auto; /* Espaçamento vertical */
+            width: 80%; /* Define a largura do divisor */
+            opacity: 0.5; /* Reduz opacidade para suavizar */
+        }
+                /* Ajustes do rodapé para mobile */
+        @media (max-width: 480px) {
+            .footer p {
+                font-size: 15px; /* Ajusta o tamanho da fonte */
+            }
+            .footer .fonte-menor {
+                font-size: 12px; /* Reduz tamanho da fonte */
+                line-height: 1.4; /* Ajusta o espaçamento */
+            }
+            .footer-divider {
+                width: 100%; /* Ajusta largura do divisor no mobile */
+            }
+        }
+        .download-section {
+                padding: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 15px;
+            }
+            .download-btn {
+                background-color: #9F43BE;
+                color: white;
+                text-decoration: none;
+                font-size: 16px;
+                padding: 10px 15px;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                transition: all 0.3s ease;
+                font-weight: bold;
+                margin-top: 80px;
+            }
+
+            .download-btn i {
+                font-size: 18px;
+            }
+
+            .download-btn:hover {
+                background-color: #7D3598;
+            }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="https://drive.google.com/thumbnail?id=1iZTd5_tOqqVTFtrgbqdKazN1J1Yk-PuE" alt="Logo">
+        </div>
+        <div class="menu-toggle">
+            <i class="bx bx-menu"></i>
+            <i class="bx bx-x" style="display: none;"></i> <!-- Ícone de fechar menu -->
+        </div>
+        <ul>
+            <li><a href="#introducao">Introdução</a></li>
+            <li><a href="#secao1">Tópico 1</a></li>
+            <li><a href="#secao22">Tópico 2</a></li>
+            <li><a href="#secao3">Tópico 3</a></li>
+            <li><a href="#download">Download</a></li>
+            <li><a href="#conclusao">Conclusão</a></li>
+            <li><a href="#referencias">Refs Bibliográficas</a></li>
+        </ul>
+    </div>
+    <!-- Título -->
+    <section id="titulo" class="titulo-intro">
+        <h1 class="titulo-programa">PROGRAMA DE ATUALIZAÇÃO</h1>
+    </section>
+    
+    <!-- Capa do Livro -->
+    <section id="capa-livro" class="capa-livro">
+        <div class="borda superior"></div>
+        <div class="conteudo-capa">
+            <h1 class="titulo-materia">LÍNGUA PORTUGUESA - NÍVEL 2</h1>
+            <h2 class="subtitulo-professor">PROFª VALÉRIA SILVA ROSA DE ALMEIDA</h2>
+        </div>
+        <div class="borda inferior"></div>
+    </section>
+    <!-- Seção Introdução -->
+    <section id="introducao" class="introducao">
+        <!-- Barra Superior -->
+        <div class="barra-superior">
+            <h1 class="titulo-barra">UNIDADE 3 | ESTRATÉGIAS ARGUMENTATIVAS</h1>
+        </div>
+    
+        <!-- Conteúdo -->
+        <div class="conteudo-introducao">
+            <div class="caixa-texto">
+                <h1 class="titulo-introducao">INTRODUÇÃO</h1>
+                <p>Olá estudante!</p>
+                <p>
+                    A arte da argumentação é uma habilidade essencial para comunicar ideias de forma clara e convincente,
+                    seja no ambiente acadêmico, no mercado de trabalho ou em contextos pessoais. No entanto, argumentar
+                    não é apenas sobre apresentar opiniões; é necessário sustentá-las com base em fatos, lógica e informações
+                    consistentes. Essa prática envolve não apenas técnica, mas também um profundo entendimento sobre o
+                    tema abordado e o público-alvo.
+                </p>
+                <p>
+                    Nesta unidade, exploraremos os principais aspectos que tornam um texto argumentativo eficaz, desde a
+                    estrutura básica até estratégias que ampliam sua qualidade. A proposta é desmistificar a ideia de que há
+                    fórmulas prontas para argumentar bem, enfatizando o papel da prática, da pesquisa e da reflexão crítica
+                    no desenvolvimento dessa competência.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="secao1" class="secao1">
+        <h1>
+            1. A ARGUMENTAÇÃO
+        </h1>
+        <p>
+            Vamos refletir sobre uma pergunta que certamente você já se fez, mordendo a caneta diante de um tema
+            considerado complicado por você ou diante de uma <strong>dúvida que você não</strong> consegue desatar: <span class="paragrafo-italic">como
+            argumentar bem?</span>
+        </p>
+        <p>
+            Bem, comecemos por <span class="paragrafo-italic">desmontar</span> a pergunta feita: não há nenhuma “fórmula mágica” para a argumentação.
+            Há “fórmulas” para a ortografia, para a concordância – mas a <strong>argumentação é um</strong> <span class="paragrafo-italic">território pessoal</span>:
+            nele nós somos (ou tentamos ser) nós mesmos! Dizer que há alguma mágica para “argumentar bem”
+            significaria dizer que há opiniões “certas” e “erradas”, já prontinhas e empacotadas para uso.
+        </p>
+        <div class="container-box">
+            <div class="content">
+                <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1742923982/u8gp0piramtoisgsuo9o.jpg"
+                    alt="Imagem representativa">
+                <p class="textimg">
+                    Vale ressaltar, porém, que a argumentação
+                    apresenta um propósito, o de convencer
+                    alguém para que ele possa mudar
+                    sua opinião ou ter o comportamento
+                    alterado. Para que isso aconteça, usamos
+                    argumentos. No momento da produção
+                    textual, esses argumentos são essenciais,
+                    são provas que o autor (no caso, você)
+                    apresentará a fim de defender sua ideia e
+                    convencer o leitor de que essa é a correta.<br><br>
+                    A questão é que a opinião é um problema
+                    nosso – <span class="paragrafo-italic">nós é que construímos nossos
+                    pontos de vista</span> ao longo da vida. De outra
+                    forma, não passaríamos de papagaios que
+                    decoram “verdades” e passam a repeti-las
+                    sem pensar.
+                </p>
+            </div>
+            <p><span class="description"><strong>Fonte:</strong> 123RF</span></p>
+            <p><span class="description"><strong>Descrição da imagem:</strong> A imagem mostra um ambiente de sala de aula descontraído com um grupo de três jovens
+            reunidos. Ao centro, dois estudantes homens sentados em uma mesa interagem com a outra estudante, uma mulher,
+            que está gesticulando enquanto fala. Ao fundo, há um quadro branco e uma parede de tijolos aparentes, conferindo
+            um toque rústico ao local.</span>
+            </p>
+        </div>
+        <p>
+            Nós já percebemos que os principais aspectos técnicos do texto argumentativo são: unidade de assunto,
+            boa sequência lógica, coesão, coerência, clareza de linguagem, uso de organizadores textuais. Mas tudo
+            isso é, digamos, o <span class="paragrafo-italic">esqueleto</span> do texto. E a <span class="paragrafo-italic">substância</span>?<br>
+        </p>
+        <p>
+            Vamos pensar agora sobre <span class="paragrafo-italic">alguns aspectos</span> que interferem na qualidade do texto e na sua “substância”.
+        </p>
+        <h1>
+            1.1 MOTIVAÇÃO
+        </h1>
+        <p>
+            É muito difícil argumentar sobre algum assunto que não nos motiva, que não nos interessa. Suponha
+            se que se peça um texto sobre futebol e que você tenha horror a futebol. Você pode até encher linguiça,
+            mas a desmotivação certamente vai tirar todo o brilho do seu texto. Bem, não se culpe: acontece com
+            todo o mundo! O que fazer, então? Tentar persuadir, convencer a você que a <strong>sua meta é ter muito
+            CONHECIMENTO para ser “aquele” alguém, não apenas mais um. Encare</strong>, portanto, o seu texto a
+            respeito do futebol como um <strong>aprimoramento pessoal e profissional</strong>. Quem sabe você pode se tornar
+            aquele jogador famoso, aquela técnica famosa. Uau! A primeira mulher como técnica de futebol!!
+        </p>
+        <h1>
+            1.2 INFORMAÇÕES
+        </h1>
+        <p>
+            O objetivo do texto argumentativo é convencer o leitor das ideias apresentadas pelo autor (nesse caso,
+            você). Assim, <strong>o primeiro passo é buscar informações sobre o tema</strong>, pois é muito difícil escrever sobre
+            um assunto sobre o qual não se tenha informação, mesmo que a questão nos interesse. Nesse caso, é
+            sempre melhor reforçar as informações sobre o assunto, lendo mais, multiplicando os pontos de vista.
+            <strong>Escrever sem informação de apoio, sem dados concretos, em geral, leva ao texto vazio, com
+            muita conversa fiada, que não convence ninguém</strong>. A falta de informação pode nos levar a situações
+            embaraçosas, em uma roda de amigos, em uma festa, na sala de aula, ao produzir um texto. É claro
+            que ninguém precisa ser uma enciclopédia ambulante para argumentar bem – basta não ter vergonha,
+            preguiça de fazer consultas, pesquisar, quando se tem dúvida diante de um dado concreto que interesse
+            à argumentação. Como você percebe, nesse terreno também não há “fórmulas” – só a leitura (livros,
+            revistas, jornais, periódicos...) resolve!!
+        </p>
+        <h1>
+            1.3 PROBLEMA DO SENSO-COMUM
+        </h1>
+        <p>
+            Falta de motivação com falta de informação leva, geralmente, a um lugar pior num texto argumentativo:
+            <span class="paragrafo-italic">o senso-comum</span> (inclusive o chavão ou clichê) que tem contaminado boa parte dos textos escolares,
+            acadêmicos (e não só eles!).
+        </p>
+        <p>
+            <strong>O senso-comum</strong> (também chamado de lugar-comum) é aquela afirmação tão batida e repetida que não
+            significa mais nada – tudo que se pode fazer com ela é repeti-la. Encerra-se um texto escrevendo que
+            não há nada mais belo que o sorriso de uma criança, ou então que as guerras acabarão quando todos
+            perceberem que só o amor constrói, e tiramos uma boa nota! Bem, bem... Não se pode dizer que não se
+            deva pensar, escrever, mas no lugar e na hora certa e, certamente não será <strong>num texto acadêmico.</strong>
+        </p>
+        <p>
+            O senso-comum não nos faz pensar, refletir ou argumentar. Em vez de convidar o leitor a seguir um
+            raciocínio ou desdobrar criticamente um ponto de vista, o senso-comum convida-o simplesmente a
+            obedecer a ordem preestabelecida e indiscutível. Para “concluir” essas ordens ao leitor, o senso-comum
+            se alimenta de <span class="paragrafo-italic">afirmações generalizantes</span>, de <span class="paragrafo-italic">totalidades indeterminadas</span> <strong>que não deixam espaço
+            para o leitor pensar.</strong>
+        </p>
+        <p>
+            Veja alguns exemplos dessas totalidades navegando pelas setas a seguir.
+        </p>
+        <div class="slider-container">
+            <i class="bx bx-chevron-left arrow left-arrow" onclick="prevSlide()"></i>
+            <div class="slider">
+                <div class="slide"><span class="paragrafo-italicn">Nada pode destruir o bem.</span>
+                </div>
+                <div class="slide"><span class="paragrafo-italicn">O homem bom é mais feliz.</span>
+                </div>
+                <div class="slide"><span class="paragrafo-italicn">O Homem é um ser egoísta por natureza.</span>
+                </div>
+                <div class="slide"><span class="paragrafo-italicn">O brasileiro não gosta de trabalhar.</span>
+                </div>
+                <div class="slide"><span class="paragrafo-italicn">A sociedade é uma máquina que não pode parar.</span>
+                </div>
+                <div class="slide"><span class="paragrafo-italicn">O amor só é amor quando é autêntico.</span>
+                </div>
+            </div>
+            <i class="bx bx-chevron-right arrow right-arrow" onclick="nextSlide()"></i>
+        </div>
+        <p>
+            Observe que, em geral, sentenças assim aparecem desacompanhadas de qualquer explicação do que
+            seja “bem”, “o Homem”, “o brasileiro”, “a sociedade”, “o amor”. De fato, os sensos-comuns são blocos
+            definitivos e totalizantes que se transformam em ordens que se dão ao leitor, como “o Homem”, “o Jovem”,
+            “o Político”, “o Brasileiro”, sem explicitar de que homem, de que jovem, de que político e de que brasileiro
+            estamos mencionando, sem delimitar faixa etária, classe social, cultura, circunstância, histórica etc.
+            Portanto, isso significa, quase sempre, dizer nada sobre coisa alguma! Nós sabemos que o mundo é bem
+            mais complexo.
+        </p>
+        <p>
+            Infelizmente, o senso-comum prolifera em um tipo de texto que se pratica muito: a famosa redação escolar.
+            Não se leva o aluno a refletir, a aprimorar-se, a ser crítico, a desenvolver sua capacidade argumentativa.
+        </p>
+    </section>
+    <!-- Contêiner externo para definir a cor de fundo -->
+    <section class="outer-background">
+        <!-- Seção Saiba Mais - Retângulo de Fundo -->
+        <section class="background-section">
+            <!-- Círculo Verde -->
+            <div class="circle-green">
+                <!-- Círculo Branco com ícone -->
+                <div class="circle-white">
+                    <i class='bx bx-book-reader'></i>
+                </div>
+            </div>
+            <div class="transparent-section">
+                <h1 class="learn-more-title">SAIBA MAIS</h1>
+                <p class="learn-more-paragraph">
+                    <strong>Domine os fundamentos da argumentação!</strong>
+                    <br><br>
+                    Neste vídeo, você conhecerá os principais conceitos da Teoria da Argumentação,
+                    essenciais para a construção de textos acadêmicos, debates e produções críticas.
+                    Aprimore sua capacidade de defender ideias com embasamento sólido!
+                </p>
+                <!-- Ícone de Play -->
+                <div class="play-icon" data-video="https://www.youtube.com/embed/MO8XWCsjNjY?si=kcrrG4E23cMmBHZx"
+                    onclick="openVideoModal(this)">
+                    <i class='bx bx-play-circle'></i>
+                </div>
+            </div>
+            <!-- Modal com o vídeo -->
+            <div id="videoModal" class="video-modal" onclick="closeVideoModal()">
+                <div class="video-content" onclick="event.stopPropagation()">
+                    <i class="bx bxs-x-circle close-btn" onclick="closeVideoModal()"></i>
+                    <iframe id="videoIframe" width="800" height="450" src="" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section id="secao22" class="secao2">
+        <h1>
+            2. O TEXTO ARGUMENTATIVO
+        </h1>
+        <p>
+            Para produzirmos um bom texto argumentativo, é fundamental garantir a escrita em norma-padrão, ou
+            seja, o domínio das normas gramaticais. Além disso, é importante considerar o conhecimento adquirido
+            sobre o tema e o entendimento das ideias a partir de uma leitura reflexiva e não superficial. A elaboração
+            do texto também requer a exposição clara de como as ideias serão organizadas, por meio de um plano de
+            texto, e a capacidade de síntese, expressa em um resumo. Outro aspecto essencial é o posicionamento
+            pessoal do autor frente às informações obtidas, seguido pelo desenvolvimento da argumentação por meio
+            de argumentos sólidos. Por fim, é necessário indicar o caminho ou os caminhos possíveis para a solução
+            na conclusão do texto.
+        </p>
+        <p>
+            Logicamente, como foi mencionado acima, é claro que ninguém precisa ser uma enciclopédia ambulante,
+            um gênio para a produção de um texto argumentativo. Você, estudante, está iniciando esse processo.
+            No entanto, <strong>alguns pontos devem ser mencionados para você melhorar sua produção. PESQUISE.
+            CONSULTE. INFORME-SE.</strong>
+        </p>
+        <h1 id="secao3">
+            3. ESTRATÉGIAS ARGUMENTATIVAS
+        </h1>
+        <p>
+            A argumentação é uma prática que requer não apenas domínio técnico da escrita, mas também a
+            capacidade de selecionar e organizar ideias de maneira lógica e convincente. Para isso, é fundamental
+            compreender os elementos que compõem um texto argumentativo, como a construção de uma tese, o
+            uso de argumentos sólidos e a formulação de conclusões coerentes. Neste contexto, vamos explorar as
+            características estruturais e estratégias que potencializam a eficácia de textos argumentativos, preparando
+            você para criar produções que não apenas informam, mas persuadem.
+        </p>
+    </section>
+    <!-- Seção Saiba Mais - Retângulo de Fundo -->
+    <section class="background-section">
+        <!-- Círculo Verde -->
+        <div class="circle-green">
+            <!-- Círculo Branco com ícone -->
+            <div class="circle-white">
+                <i class='bx bx-book-reader'></i>
+            </div>
+        </div>
+        <div class="transparent-section">
+            <h1 class="learn-more-title">SAIBA MAIS</h1>
+            <p class="learn-more-paragraph">
+                <strong>Aprimore sua redação com estratégias argumentativas eficazes!</strong>
+                <br><br>
+                Este vídeo apresenta técnicas para desenvolver argumentos convincentes e construir
+                textos persuasivos, fundamentais para o sucesso em provas e trabalhos acadêmicos.
+            </p>
+            <!-- Ícone de Play -->
+            <div class="play-icon" data-video="https://www.youtube.com/embed/5bHtgXXvdJM?si=uLfFk0daVqbXNStz"
+                onclick="openVideoModal(this)">
+                <i class='bx bx-play-circle'></i>
+            </div>
+        </div>
+        <!-- Modal com o vídeo -->
+        <div id="videoModal" class="video-modal" onclick="closeVideoModal()">
+            <div class="video-content" onclick="event.stopPropagation()">
+                <i class="bx bxs-x-circle close-btn" onclick="closeVideoModal()"></i>
+                <iframe id="videoIframe" width="800" height="450" src="" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+    <section id="secao2" class="secao2">
+        <h1>
+            3.1 CARACTERÍSTICAS E ESTRUTURA
+        </h1>
+        <p>
+            O texto argumentativo apresenta uma estrutura em três momentos e com suas respectivas características,
+            como já é de seu conhecimento:
+        </p>
+        <div class="tabs-container">
+            <div class="tabs-header">
+                <div class="tab-button" onclick="showTab(0)">Introdução</div>
+                <div class="tab-button" onclick="showTab(1)">Desenvolvimento</div>
+                <div class="tab-button" onclick="showTab(2)">Conclusão</div>
+            </div>
+            <div class="tab-content" id="tab-0">
+                <strong>Presença de uma tese</strong> (ponto de vista, assunto), geralmente o primeiro
+                parágrafo do texto OU no início dele:
+                <strong>tópico frasal</strong>, e deve ser apresentada, indicando a informação geral sobre o tema, além de explicar o porquê
+                da apresentação do mesmo.
+            </div>
+            <div class="tab-content" id="tab-1">
+                <strong>Desenvolvimento</strong> de argumentos que
+                comprovem a tese apresentada. Uma
+                das partes mais importantes de um
+                texto argumentativo é a do <strong>desenvolvimento</strong> porque ele apresenta um dos
+                recursos mais essenciais que são os
+                <strong>argumentos</strong>. Porém precisamos ter
+                em mente que <strong>argumentar NÃO É
+                INFORMAR, mas convencer o leitor
+                a respeito da opinião do autor por
+                meio de argumentos a favor e contra, relevantes, convincentes, baseados em fatos</strong>. Como nesse momento,
+                a tese é fundamentada, é necessário
+                usar os <strong>organizadores textuais</strong>.
+            </div>
+            <div class="tab-content" id="tab-2">
+                A <strong>Conclusão</strong> pode ser feita de 02 maneiras:<br><br>
+                (1) Em forma de <strong>síntese</strong>, isto é, o
+                autor do texto deve resumir os argumentos e repetir sua tese com outras palavras, concluindo o raciocínio
+                construído desde o início do texto.
+                <br><br>
+                (2) Com <strong>propostas de solução</strong> a respeito dos problemas discutidos
+                anteriormente, apresentando soluções práticas e detalhadas acerca
+                dos problemas levantados no texto.
+                Por exemplo, se o problema discutido na argumentação for “<strong>A legalização</strong> do aborto”, a solução deve ser
+                direcionada para essa questão, a da legalização e não somente do aborto em si.
+            </div>
+            </div>
+            <p>
+                É sempre bom lembrar que os organizadores textuais são palavras, também conhecidas como conectivos,
+                que desempenham um papel crucial no encadeamento das ideias, sendo responsáveis pela coesão
+                textual. Esses organizadores podem ser utilizados para exemplificar ou reforçar um argumento, fazer
+                comparações, reafirmar um ponto de vista ou até mesmo apresentar um argumento contrário.
+            </p>
+            <p>
+                No desenvolvimento do argumento, algumas estratégias eficazes incluem enumerar problemas ou ideias
+                relevantes, confrontá-los de maneira analítica, exemplificá-los para maior clareza, e indicar suas causas,
+                efeitos, motivos ou consequências. Essas práticas contribuem para uma argumentação bem-estruturada
+                e coerente.
+            </p>
+            <div class="container-boxv">
+                <div class="content">
+                    <p class="textimg">
+                        Toda essa estrutura pode ser compreendida
+                        como um plano de texto, sendo essencial
+                        planejar antes de iniciar a produção. Para
+                        isso, recomenda-se elaborar inicialmente
+                        um rascunho, separado da versão final do
+                        texto, garantindo um espaço para ajustes
+                        e aprimoramentos.<br><br>
+                        Um ponto importante no processo de escrita
+                        é a atenção às palavras-chave, que devem
+                        ser incorporadas no planejamento. Essas
+                        palavras ajudam a direcionar o texto para
+                        o tema específico, pois nomeiam ideias e
+                        conceitos necessários ao desenvolvimento
+                        da argumentação. Outro aspecto
+                        indispensável é o uso da norma-padrão da
+                        Língua Portuguesa, assegurando clareza
+                        e precisão na comunicação.
+                    </p>
+                    <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1742994400/wxxv4u0la0qbvl09iztf.jpg"
+                        alt="Imagem representativa">
+                </div>
+                <p><span class="description"><strong>Descrição da imagem:</strong> A imagem retrata uma mulher sorridente com o rosto apoiado nas mãos,
+                parecendo refletir ou tendo uma ideia. Acima de sua cabeça, há uma ilustração de uma lâmpada
+                acesa, simbolizando criatividade ou inspiração. Atrás dela, um fundo cinza contém desenhos
+                coloridos e esquemáticos que incluem gráficos, símbolos e equações, representando pensamentos
+                ou conceitos abstratos como se estivessem saindo de sua cabeça..</span>
+                </p>
+            </div>
+            <p>
+                Portanto, para escrever um bom texto argumentativo, é necessário compreender as condições de produção,
+                considerando questões como “Para quem?” e “Por quê?” realizar um planejamento detalhado, estruturado
+                em um plano de texto; escrever um rascunho para organizar as ideias; e revisar cuidadosamente antes
+                de entregar o texto finalizado.
+            </p>
+    </section>
+    <!-- Seção Saiba Mais - Retângulo de Fundo -->
+    <section class="background-section">
+        <!-- Círculo Verde -->
+        <div class="circle-green">
+            <!-- Círculo Branco com ícone -->
+            <div class="circle-white">
+                <i class='bx bx-book-reader'></i>
+            </div>
+        </div>
+        <div class="transparent-section">
+            <h1 class="learn-more-title">SAIBA MAIS</h1>
+            <p class="learn-more-paragraph">
+                <strong>Construa parágrafos argumentativos com precisão!</strong>
+                <br><br>
+                Aprenda a estruturar parágrafos argumentativos de forma clara e coesa, utilizando
+                técnicas que fortalecem sua escrita acadêmica e produção textual.
+            </p>
+            <!-- Ícone de Play -->
+            <div class="play-icon" data-video="https://www.youtube.com/embed/tYqLEiGQ-AI?si=qtHKmk6MoLgWS74m"
+                onclick="openVideoModal(this)">
+                <i class='bx bx-play-circle'></i>
+            </div>
+        </div>
+        <!-- Modal com o vídeo -->
+        <div id="videoModal" class="video-modal" onclick="closeVideoModal()">
+            <div class="video-content" onclick="event.stopPropagation()">
+                <i class="bx bxs-x-circle close-btn" onclick="closeVideoModal()"></i>
+                <iframe id="videoIframe" width="800" height="450" src="" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+    <!-- Seção Conclusão -->
+    <section id="conclusao" class="conclusao">
+        <!-- Conteúdo -->
+        <div class="conteudo-conclusao">
+            <div class="caixa-texto">
+                <h1 class="titulo-conclusao">CONCLUSÃO</h1>
+                <p>
+                    Produzir um texto argumentativo eficaz vai além de expor opiniões; é sobre construir uma ponte sólida
+                    entre ideias e fatos, direcionada a convencer o leitor. Para isso, o domínio da norma-padrão da língua
+                    portuguesa, o uso de argumentos bem estruturados e o planejamento prévio são elementos fundamentais.
+                </p>
+                <p>
+                    Ao longo desta unidade, você foi convidado(a) a refletir sobre os desafios e as potencialidades da
+                    argumentação, com dicas e orientações práticas para superar obstáculos como o senso-comum e a falta
+                    de motivação. Com dedicação e prática, argumentar bem deixará de ser um desafio para se tornar uma
+                    poderosa ferramenta de expressão e transformação.
+                </p>
+    
+            </div>
+        </div>
+        <div id="download" class="download-section">
+            <a href="" class="download-btn">
+                Baixar PDF <i class="fas fa-download"></i> <!-- Ícone de download -->
+            </a>
+        </div>
+    </section>
+    <!-- Seção Referências-->
+    <section id="referencias" class="referencias">
+        <div class="conteudo-referencias">
+            <div class="caixa-texto">
+                <h1 class="titulo-referencias">REFERÊNCIAS</h1>
+                <p>
+                    FIORIN, José Luiz. <strong>Argumentação</strong>. São Paulo: Contexto. 2015.
+                </p>
+                <p>
+                    FIORIN, José Luiz; SAVIOLI, Francisco Platão. <strong>Lições de texto</strong> – Leitura e redação. São Paulo: Ática,
+                    2011.
+                </p>
+                <p>
+                    TOULMIN, Stephen. <strong>Os usos do argumento</strong>. 2.ed. São Paulo: Martins Fontes, 2011.
+                </p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>Copyright © de Universidade São Francisco</p>
+        <hr class="footer-divider">
+        <span class="fonte-menor">Todos os direitos reservados. Este ebook ou
+            qualquer parte dele não pode ser reproduzido ou usado em quaisquer formas (eletrônico,
+            gravação, fotocópia, distribuição pela Internet ou outros) sem autorização
+            expressa, por escrito, da <strong>Universidade São Francisco.</strong></span>
+    </footer>
+    <script>
+        // Navbar
+            document.querySelector('.menu-toggle').addEventListener('click', () => {
+                const menu = document.querySelector('.navbar ul');
+                const icons = document.querySelectorAll('.menu-toggle i'); // Seleciona ambos os ícones
+
+                menu.classList.toggle('show'); // Alterna a visibilidade do menu
+
+                // Alterna entre o ícone de abrir (menu) e o ícone de fechar (x)
+                icons[0].style.display = icons[0].style.display === 'none' ? 'block' : 'none'; // Mostra ou esconde o ícone de menu
+                icons[1].style.display = icons[1].style.display === 'none' ? 'block' : 'none'; // Mostra ou esconde o ícone de fechar
+            });
+            // Fechar o menu ao clicar em um link
+            const links = document.querySelectorAll('.navbar ul li a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    const menu = document.querySelector('.navbar ul');
+                    const icons = document.querySelectorAll('.menu-toggle i');
+
+                    // Fecha o menu ao clicar no link
+                    menu.classList.remove('show');
+                    icons[0].style.display = 'block'; // Exibe o ícone de menu
+                    icons[1].style.display = 'none'; // Esconde o ícone de fechar
+                });
+            });
+            // Captura o elemento navbar
+            const navbar = document.querySelector('.navbar');
+
+            // Função que altera a opacidade da navbar
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) { // Quando o scroll for maior que 50px
+                    navbar.style.backgroundColor = 'rgba(159, 67, 190, 0.8)'; // Opacidade 80%
+                } else {
+                    navbar.style.backgroundColor = '#9F43BE'; // Cor original sem transparência
+                }
+            });
+        function showTab(index) {
+                var contents = document.querySelectorAll('.tab-content');
+                var buttons = document.querySelectorAll('.tab-button');
+
+                contents.forEach((content, i) => {
+                    content.classList.toggle('active', i === index);
+                });
+
+                buttons.forEach((button, i) => {
+                    button.classList.toggle('active', i === index);
+                });
+            }
+            // Exibir a primeira tab por padrão
+            showTab(0);
+        function initializeSlider(sliderSelector) {
+                const sliderContainer = document.querySelector(sliderSelector);
+                const slider = sliderContainer.querySelector('.slider');
+                const slides = sliderContainer.querySelectorAll('.slide');
+                const leftArrow = sliderContainer.querySelector('.left-arrow');
+                const rightArrow = sliderContainer.querySelector('.right-arrow');
+                let currentIndex = 0;
+
+                function showSlide(index) {
+                    const totalSlides = slides.length;
+
+                    if (index < 0) {
+                        currentIndex = totalSlides - 1;
+                    } else if (index >= totalSlides) {
+                        currentIndex = 0;
+                    } else {
+                        currentIndex = index;
+                    }
+
+                    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+                }
+
+                leftArrow.addEventListener('click', () => showSlide(currentIndex - 1));
+                rightArrow.addEventListener('click', () => showSlide(currentIndex + 1));
+
+                // Inicializa o slider
+                showSlide(currentIndex);
+            }
+
+            // Exemplo de inicialização de sliders
+            initializeSlider('.slider-container'); // Slider 1
+            initializeSlider('.slider-container-2'); // Slider 2  
+             // Função para abrir o modal com o vídeo
+                function openVideoModal(element) {
+                    var videoModal = document.getElementById('videoModal');
+                    var iframe = document.getElementById('videoIframe');
+
+                    // Obtém o link do vídeo do atributo 'data-video' do ícone de play clicado
+                    var videoLink = element.getAttribute("data-video");
+
+                    // Define o src do iframe com o link do vídeo
+                    iframe.src = videoLink;
+
+                    // Exibe o modal
+                    videoModal.style.display = "flex";
+                }
+
+                // Função para fechar o modal
+                function closeVideoModal() {
+                    var videoModal = document.getElementById('videoModal');
+                    var iframe = document.getElementById('videoIframe');
+
+                    // Limpa o vídeo (remove a URL para evitar que o vídeo continue tocando)
+                    iframe.src = "";
+                    videoModal.style.display = "none";  // Fecha o modal
+                }
+
+                // Impede o fechamento do modal quando o clique for dentro do modal de vídeo
+                document.getElementById('videoModal').addEventListener('click', function (event) {
+                    // Apenas fecha o modal se o clique for fora da área de conteúdo (ou seja, na área preta)
+                    if (event.target === this) {
+                        closeVideoModal();
+                    }
+                });
+                // Abrir modal ao clicar na imagem
+                function openModal(imgElement) {
+                    let modal = document.getElementById("imageModal");
+                    let modalImg = document.getElementById("modalImg");
+
+                    modal.style.display = "flex";
+                    modalImg.src = imgElement.src;
+                }
+
+                // Fechar modal ao clicar no fundo ou no botão "X"
+                function closeModal() {
+                    document.getElementById("imageModal").style.display = "none";
+                }
+    </script>
+</body>
+</html>
