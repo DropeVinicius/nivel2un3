@@ -455,7 +455,7 @@
             border-radius: 10px; /* Cantos arredondados */
             padding: 20px; /* Espaçamento interno */
             width: 90%;
-            max-width: 800px; /* Limite de largura */
+            max-width: 700px; /* Limite de largura */
             margin: 20px auto; /* Centralizar */
         }
         .container-boxv {
@@ -464,20 +464,35 @@
             border-radius: 10px; /* Cantos arredondados */
             padding: 20px; /* Espaçamento interno */
             width: 90%;
-            max-width: 800px; /* Limite de largura */
+            max-width: 700px; /* Limite de largura */
             margin: 20px auto; /* Centralizar */
         }
         .container-box p {
             margin: 0; /* Remove a margem herdada */
-            padding: 5px;
             width: 100%; /* Faz o texto ocupar todo o espaço disponível */
         }
         .container-boxv p {
             margin: 0; /* Remove a margem herdada */
-            padding: 5px;
             width: 100%; /* Faz o texto ocupar todo o espaço disponível */
         }
-
+        /* Garantir que a fonte fique abaixo da imagem */
+        .imagem-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centraliza a imagem e a fonte */
+        }
+        /* Ajustar a posição da fonte abaixo da imagem */
+        .fonte-imagem {
+            font-size: 12px !important;
+            color: #555;
+            text-align: center;
+            margin-top: 5px; /* Pequeno espaçamento entre a imagem e a fonte */
+            display: block;
+        }
+        .fonte-italic{
+            font-weight: bold;
+            font-style: italic;
+        }
         /* Layout da imagem + texto */
         .content {
             display: flex;
@@ -506,10 +521,10 @@
 
         /* Descrição abaixo da imagem */
         .description {
-            font-family: 'Roboto', sans-serif;
-            font-size: 14px;
-            margin-top: 10px;
-            text-align: justify; /* Melhor alinhamento */
+            font-family: 'Roboto', sans-serif !important;
+            font-size: 14px !important;
+            margin-top: 10px !important;
+            text-align: justify !important; /* Melhor alinhamento */
         }
 
         /* 🔹 Responsividade 🔹 */
@@ -1209,8 +1224,11 @@
         </p>
         <div class="container-box">
             <div class="content">
-                <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1742923982/u8gp0piramtoisgsuo9o.jpg"
-                    alt="Imagem representativa">
+                <div class="imagem-wrapper">
+                    <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1742923982/u8gp0piramtoisgsuo9o.jpg"
+                        alt="Imagem representativa">
+                    <p class="fonte-imagem"><strong>Fonte:</strong> 123RF</p>
+                </div>
                 <p class="textimg">
                     Vale ressaltar, porém, que a argumentação
                     apresenta um propósito, o de convencer
@@ -1221,20 +1239,22 @@
                     textual, esses argumentos são essenciais,
                     são provas que o autor (no caso, você)
                     apresentará a fim de defender sua ideia e
-                    convencer o leitor de que essa é a correta.<br><br>
+                    convencer o leitor de que essa é a correta.
+                    <br><br>
                     A questão é que a opinião é um problema
-                    nosso – <span class="paragrafo-italic">nós é que construímos nossos
+                    nosso – <span class="fonte-italic">nós é que construímos nossos
                     pontos de vista</span> ao longo da vida. De outra
                     forma, não passaríamos de papagaios que
                     decoram “verdades” e passam a repeti-las
                     sem pensar.
                 </p>
             </div>
-            <p><span class="description"><strong>Fonte:</strong> 123RF</span></p>
-            <p><span class="description"><strong>Descrição da imagem:</strong> A imagem mostra um ambiente de sala de aula descontraído com um grupo de três jovens
-            reunidos. Ao centro, dois estudantes homens sentados em uma mesa interagem com a outra estudante, uma mulher,
-            que está gesticulando enquanto fala. Ao fundo, há um quadro branco e uma parede de tijolos aparentes, conferindo
-            um toque rústico ao local.</span>
+            <br>
+            <p class="description"><strong>Descrição da imagem:</strong>
+                A imagem mostra um ambiente de sala de aula descontraído com um grupo de três jovens
+                reunidos. Ao centro, dois estudantes homens sentados em uma mesa interagem com a outra estudante, uma mulher,
+                que está gesticulando enquanto fala. Ao fundo, há um quadro branco e uma parede de tijolos aparentes, conferindo
+                um toque rústico ao local.
             </p>
         </div>
         <p>
@@ -1514,14 +1534,19 @@
                         Língua Portuguesa, assegurando clareza
                         e precisão na comunicação.
                     </p>
-                    <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1742994400/wxxv4u0la0qbvl09iztf.jpg"
-                        alt="Imagem representativa">
+                    <div class="imagem-wrapper">
+                        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1742994400/wxxv4u0la0qbvl09iztf.jpg"
+                            alt="Imagem representativa">
+                    </div>
                 </div>
-                <p><span class="description"><strong>Descrição da imagem:</strong> A imagem retrata uma mulher sorridente com o rosto apoiado nas mãos,
-                parecendo refletir ou tendo uma ideia. Acima de sua cabeça, há uma ilustração de uma lâmpada
-                acesa, simbolizando criatividade ou inspiração. Atrás dela, um fundo cinza contém desenhos
-                coloridos e esquemáticos que incluem gráficos, símbolos e equações, representando pensamentos
-                ou conceitos abstratos como se estivessem saindo de sua cabeça..</span>
+                <br>
+                <p><span class="description"><strong>Descrição da imagem:</strong> 
+                        A imagem retrata uma mulher sorridente com o rosto apoiado nas mãos,
+                        parecendo refletir ou tendo uma ideia. Acima de sua cabeça, há uma ilustração de uma lâmpada
+                        acesa, simbolizando criatividade ou inspiração. Atrás dela, um fundo cinza contém desenhos
+                        coloridos e esquemáticos que incluem gráficos, símbolos e equações, representando pensamentos
+                        ou conceitos abstratos como se estivessem saindo de sua cabeça..
+                    </span>
                 </p>
             </div>
             <p>
