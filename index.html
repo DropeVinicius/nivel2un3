@@ -897,43 +897,59 @@
             color: #FF0000; /* Muda a cor para vermelho no hover */
         }
         .tabs-container {
-            width: 90%;
-            max-width: 800px;
-            margin: 20px auto;
-            border: 2px solid #015A42;
-            border-radius: 5px;
+            width: 80%;
+            max-width: 600px;
+            padding: 10px;
         }
+
         .tabs-header {
             display: flex;
-            background-color: #015A42;
+            justify-content: space-between;
+            gap: 10px; /* Espaçamento entre as abas */
         }
+
         .tab-button {
             flex: 1;
-            padding: 10px;
+            padding: 15px;
             text-align: center;
             cursor: pointer;
             color: white;
             font-weight: bold;
-            font-size: 18px;
-            border-right: 2px solid white;
+            font-size: 16px;
+            border: none;
+            background: #015A42; /* Cor individual para cada aba */
+            border-radius: 8px; /* Borda arredondada */
             transition: background 0.3s, transform 0.2s;
         }
-        .tab-button:last-child {
-            border-right: none;
-        }
         .tab-button:hover {
-            background-color: #005700;
-            transform: scale(1.01);
+            background: #005700; /* Tom mais escuro ao passar o mouse */
+            transform: scale(1.05);
         }
-        .tab-button.active {
-            background-color: #005700;
+         .tab-button.active {
+            background: #005700;
         }
+
+        .tabs-content {
+            background: white;
+            border: 2px solid #015A42;
+            padding: 10px;
+            border-radius: 10px;
+            display: none; /* Inicialmente oculto */
+            margin-top: 10px;
+        }
+
         .tab-content {
             display: none;
-            padding: 15px;
-            background: white;
-            border-top: 2px solid #015A42;
+            text-align: center;
         }
+
+        .tab-content img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
         .tab-content.active {
             display: block;
         }
@@ -1464,43 +1480,52 @@
         </p>
         <div class="tabs-container">
             <div class="tabs-header">
-                <div class="tab-button" onclick="showTab(0)">Introdução</div>
-                <div class="tab-button" onclick="showTab(1)">Desenvolvimento</div>
-                <div class="tab-button" onclick="showTab(2)">Conclusão</div>
+                <button class="tab-button" data-tab="tab1">Introdução</button>
+                <button class="tab-button" data-tab="tab2">Desenvolvimento</button>
+                <button class="tab-button" data-tab="tab3">Conclusão</button>
             </div>
-            <div class="tab-content" id="tab-0">
-                <strong>Presença de uma tese</strong> (ponto de vista, assunto), geralmente o primeiro
-                parágrafo do texto OU no início dele:
-                <strong>tópico frasal</strong>, e deve ser apresentada, indicando a informação geral sobre o tema, além de explicar o porquê
-                da apresentação do mesmo.
+            <div class="tabs-content">
+                <div id="tab1" class="tab-content">
+                    <p class="textimg">
+                    <strong>Presença de uma tese</strong> (ponto de vista, assunto), geralmente o primeiro
+                    parágrafo do texto OU no início dele:
+                    <strong>tópico frasal</strong>, e deve ser apresentada, indicando a informação geral sobre o tema, além de explicar o
+                    porquê
+                    da apresentação do mesmo.
+                    </p>
+                </div>
+                <div id="tab2" class="tab-content">
+                    <p class="textimg">
+                    <strong>Desenvolvimento</strong> de argumentos que
+                    comprovem a tese apresentada. Uma
+                    das partes mais importantes de um
+                    texto argumentativo é a do <strong>desenvolvimento</strong> porque ele apresenta um dos
+                    recursos mais essenciais que são os
+                    <strong>argumentos</strong>. Porém precisamos ter
+                    em mente que <strong>argumentar NÃO É
+                        INFORMAR, mas convencer o leitor
+                        a respeito da opinião do autor por
+                        meio de argumentos a favor e contra, relevantes, convincentes, baseados em fatos</strong>. Como nesse momento,
+                    a tese é fundamentada, é necessário
+                    usar os <strong>organizadores textuais</strong>.
+                    </p>
+                </div>
+                <div id="tab3" class="tab-content">
+                    <p class="textimg">
+                    A <strong>Conclusão</strong> pode ser feita de 02 maneiras:<br><br>
+                    (1) Em forma de <strong>síntese</strong>, isto é, o
+                    autor do texto deve resumir os argumentos e repetir sua tese com outras palavras, concluindo o raciocínio
+                    construído desde o início do texto.
+                    <br><br>
+                    (2) Com <strong>propostas de solução</strong> a respeito dos problemas discutidos
+                    anteriormente, apresentando soluções práticas e detalhadas acerca
+                    dos problemas levantados no texto.
+                    Por exemplo, se o problema discutido na argumentação for “<strong>A legalização</strong> do aborto”, a solução deve ser
+                    direcionada para essa questão, a da legalização e não somente do aborto em si.
+                    </p>
+                </div>
             </div>
-            <div class="tab-content" id="tab-1">
-                <strong>Desenvolvimento</strong> de argumentos que
-                comprovem a tese apresentada. Uma
-                das partes mais importantes de um
-                texto argumentativo é a do <strong>desenvolvimento</strong> porque ele apresenta um dos
-                recursos mais essenciais que são os
-                <strong>argumentos</strong>. Porém precisamos ter
-                em mente que <strong>argumentar NÃO É
-                INFORMAR, mas convencer o leitor
-                a respeito da opinião do autor por
-                meio de argumentos a favor e contra, relevantes, convincentes, baseados em fatos</strong>. Como nesse momento,
-                a tese é fundamentada, é necessário
-                usar os <strong>organizadores textuais</strong>.
-            </div>
-            <div class="tab-content" id="tab-2">
-                A <strong>Conclusão</strong> pode ser feita de 02 maneiras:<br><br>
-                (1) Em forma de <strong>síntese</strong>, isto é, o
-                autor do texto deve resumir os argumentos e repetir sua tese com outras palavras, concluindo o raciocínio
-                construído desde o início do texto.
-                <br><br>
-                (2) Com <strong>propostas de solução</strong> a respeito dos problemas discutidos
-                anteriormente, apresentando soluções práticas e detalhadas acerca
-                dos problemas levantados no texto.
-                Por exemplo, se o problema discutido na argumentação for “<strong>A legalização</strong> do aborto”, a solução deve ser
-                direcionada para essa questão, a da legalização e não somente do aborto em si.
-            </div>
-            </div>
+        </div>
             <p>
                 É sempre bom lembrar que os organizadores textuais são palavras, também conhecidas como conectivos,
                 que desempenham um papel crucial no encadeamento das ideias, sendo responsáveis pela coesão
@@ -1678,20 +1703,33 @@
                     navbar.style.backgroundColor = '#9F43BE'; // Cor original sem transparência
                 }
             });
-        function showTab(index) {
-                var contents = document.querySelectorAll('.tab-content');
-                var buttons = document.querySelectorAll('.tab-button');
+        document.querySelectorAll(".tab-button").forEach(button => {
+                button.addEventListener("click", function () {
+                    let tabsContainer = document.querySelector(".tabs-content");
 
-                contents.forEach((content, i) => {
-                    content.classList.toggle('active', i === index);
-                });
+                    // Verifica se alguma aba está ativa
+                    let isAnyTabActive = document.querySelector(".tab-content.active");
 
-                buttons.forEach((button, i) => {
-                    button.classList.toggle('active', i === index);
+                    // Se clicar na aba já aberta, fecha tudo
+                    if (isAnyTabActive && document.getElementById(this.dataset.tab).classList.contains("active")) {
+                        document.querySelectorAll(".tab-button").forEach(btn => btn.classList.remove("active"));
+                        document.querySelectorAll(".tab-content").forEach(content => content.classList.remove("active"));
+                        tabsContainer.style.display = "none";
+                        return;
+                    }
+
+                    // Ativar a exibição das abas
+                    tabsContainer.style.display = "block";
+
+                    // Remove a classe "active" de todas as abas e botões
+                    document.querySelectorAll(".tab-button").forEach(btn => btn.classList.remove("active"));
+                    document.querySelectorAll(".tab-content").forEach(content => content.classList.remove("active"));
+
+                    // Ativa o botão e a aba correspondente
+                    this.classList.add("active");
+                    document.getElementById(this.dataset.tab).classList.add("active");
                 });
-            }
-            // Exibir a primeira tab por padrão
-            showTab(0);
+            });
         function initializeSlider(sliderSelector) {
                 const sliderContainer = document.querySelector(sliderSelector);
                 const slider = sliderContainer.querySelector('.slider');
